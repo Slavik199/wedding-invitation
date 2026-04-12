@@ -80,19 +80,18 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* Додайте клас до CSS */
-.dress-code-text {
-    font-size: 20px;
-    line-height: 1.7;
-}
+        .dress-code-text {
+            font-size: 20px;
+            line-height: 1.7;
+        }
 
-.dress-code-highlight {
-    font-size: 21px;
-    font-weight: 600;
-    display: block;
-    margin-top: 20px;
-    color: #ffe484;  /* ніжний золотистий */
-}
+        .dress-code-highlight {
+            font-size: 21px;
+            font-weight: 600;
+            display: block;
+            margin-top: 20px;
+            color: #ffe484;
+        }
 
         .names {
             font-family: 'Playfair Display', var(--font-serif);
@@ -176,19 +175,17 @@
 
         .info-title::after {
             content: '';
-    display: block;
-    width: 80px;  /* трохи довша, як у divider */
-    height: 2px;
-    background: linear-gradient(
-        90deg, 
-        transparent 0%, 
-        var(--primary-green) 20%, 
-        var(--primary-green) 80%,
-        transparent 100%
-    );
-    margin: 12px auto 0;
-    border-radius: 3px;
-    opacity: 0.8;;
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--primary-green) 20%, 
+                var(--primary-green) 80%,
+                transparent 100%);
+            margin: 12px auto 0;
+            border-radius: 3px;
+            opacity: 0.8;
         }
 
         .date {
@@ -321,6 +318,24 @@
             letter-spacing: 0.5px;
         }
 
+        /* ===== АКЦЕНТНИЙ БЛОК ПРО ПОДАРУНКИ ===== */
+        .gift-message {
+            background: rgba(0, 168, 107, 0.1);
+            border: 1px solid rgba(0, 168, 107, 0.3);
+            border-radius: 28px;
+            padding: 28px 24px;
+            margin: 30px auto;
+            max-width: 800px;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+
+        .gift-message:hover {
+            background: rgba(0, 168, 107, 0.15);
+            border-color: rgba(0, 168, 107, 0.5);
+            transform: scale(1.01);
+        }
+
         /* ===== АДАПТАЦІЯ ДЛЯ МАЛЕНЬКИХ ЕКРАНІВ ===== */
         @media (max-width: 480px) {
             .hero {
@@ -354,6 +369,11 @@
                 border-radius: 30px;
                 padding: var(--spacing-sm);
             }
+
+            .gift-message {
+                padding: 20px 16px;
+                margin: 20px auto;
+            }
         }
 
         /* ===== ДЛЯ ПЛАНШЕТІВ ===== */
@@ -386,6 +406,7 @@
         .container > *:nth-child(4) { animation-delay: 0.5s; }
         .container > *:nth-child(5) { animation-delay: 0.6s; }
         .container > *:nth-child(6) { animation-delay: 0.7s; }
+        .container > *:nth-child(7) { animation-delay: 0.8s; }
 
         /* ===== ДОСТУПНІСТЬ ===== */
         @media (prefers-reduced-motion: reduce) {
@@ -458,7 +479,7 @@
                                 Ніжні, пастельні або природні кольори —
                                 світлі та гармонійні, як літній день 
                             </p>
-                            <p><strong class="dress-code-text">Біла довга сукня — тільки для нареченої </strong></p>
+                            <p><strong class="dress-code-text">Біла довга сукня — тільки для нареченої</strong></p>
                         </article>
                     </div>
                 </div>
@@ -486,6 +507,18 @@
                     </div>
                 </section>
 
+                <!-- АКЦЕНТНИЙ БЛОК ПРО ПОДАРУНКИ (додано) -->
+                <div class="gift-message">
+                    <p style="font-size: 18px; line-height: 1.6; margin-bottom: 15px; font-family: var(--font-sans);">
+                        💚 Дорогі гості! Квіти швидко зів'януть, тому просимо вас не дарувати їх, 
+                        а натомість суму, еквівалентну вартості букета, зробити цінним внеском 
+                        у створення нашого затишного дому.
+                    </p>
+                    <p style="font-size: 20px; font-weight: 500; color: var(--primary-green); font-family: var(--font-serif);">
+                        Будемо щиро вдячні, що ви допоможете здійснити мрію 🤍
+                    </p>
+                </div>
+
                 <!-- Імена молодят -->
                 <p class="names" aria-label="Імена молодят">
                     Святослав та Євгенія 🤍
@@ -506,7 +539,7 @@
                 <!-- Додаткова інформація -->
                 <aside class="postscript" aria-label="Важлива примітка">
                     <p>
-                        P.S.: просимо надати точну інформацію про вашу присутність на нашому святі до <time datetime="2026-06-10">10 червня</time>,
+                        P.S.: просимо надати точну інформацію про вашу присутність на нашому святі до <time datetime="2026-06-10">1 червня</time>,
                         щоб ми мали час все організувати і зарезервувати ✨
                     </p>
                 </aside>
